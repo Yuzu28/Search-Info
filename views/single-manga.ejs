@@ -1,0 +1,56 @@
+<% include head %>
+
+<% include navbar %>
+
+
+<body>
+   
+        
+
+
+        <div class="container" >
+                <div class="row">
+                        <div class="col-md-4" id="crow">
+                                <img src="<%=  parsedData.image_url %>"  />
+                        </div>
+                        <div class="col-md-8">
+                          <h2><%= parsedData.title %> </h2>
+                          <ul class="list-group">
+                              <li class="list-group-item"><strong>Type:</strong> <%= parsedData.type %></li>
+                              <li class="list-group-item"><strong>Genre: </strong> <%= parsedData.genres[0].name %> </li>
+                              <li class="list-group-item"><strong>Volumes:</strong> <%= parsedData.volumes %></li>
+                              <li class="list-group-item"><strong>Chapters:</strong> <%= parsedData.chapters %></li>
+
+                              
+                              <li class="list-group-item"><strong>Status:</strong> <%= parsedData.status %></li>
+                              <li class="list-group-item"><strong>Publication Dates:</strong> <%= parsedData.published.string %></li>
+
+
+                              <li class="list-group-item"><strong>Score:</strong> <%= parsedData.score %></li>
+                              <li class="list-group-item"><strong>Author:</strong> <%= parsedData.authors[0].name %></li>
+
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="well text-right" id="#about">
+
+                            <h3 class="text-left">Overview</h3>
+                            <div class ="stuff text-left">
+                                <%= parsedData.synopsis %>
+                           
+                            </div>
+                            
+                          <hr>
+
+                          <a href="<%= parsedData.url %>" target="_blank" class="btn btn-primary" >View on MyAnimeList</a>
+
+                          <a href="/" class="btn btn-success" >Go Back To Search</a>
+                       
+                        </div>
+                      </div>
+              </div>
+        
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<% include head %>
+
+<% include navbar %>
+
+  <body>
+    <div class = "container">
+        <div class = "row">
+          <div class = "col col-12">
+              <h1 class="text-center">Anime Results</h1>
+          </div>
+              <!-- We have an array, its parsed data -->
+              <% parsedData.forEach((anime, i) =>{  %>
+                  <div class= "col col-3-lg-3 col-md-4 col-xs-12 poster">
+                    <a href="/anime/<%= anime.mal_id %>">
+                    <img src="<%=  anime.image_url %>" />
+                    </a>
+                    <p class = 'title'><strong>
+                    <%= anime.title %>
+                  </strong>
+                    </p>
+                  </div>
+                <% }) %>
+
+          </div>
+
+
+        </div>
+
+
+
+
+    
+    
+
+  </body>
+</html>
